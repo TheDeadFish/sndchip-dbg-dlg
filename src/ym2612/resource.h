@@ -1,0 +1,63 @@
+#ifndef IDC_STATIC
+#define IDC_STATIC (-1)
+#endif
+
+#define IDB_ALGO0                       401
+#define IDB_ALGO1                       402
+#define IDB_ALGO2                       403
+#define IDB_ALGO3                       404
+#define IDB_ALGO4                       405
+#define IDB_ALGO5                       406
+#define IDB_ALGO6                       407
+#define IDB_ALGO7                       408
+
+#define IDD_DEBUGYM2612			101
+
+#define IDC_YM2612_TAB			50071
+#define IDC_YM2612_OP1			50072
+#define IDC_YM2612_OP2			50073
+#define IDC_YM2612_OP3			50074
+#define IDC_YM2612_OP4			50075
+#define IDC_YM2612_FREQ			50076
+#define IDC_YM2612_MOD			50077
+#define IDC_YM2612_LEFT			50078
+#define IDC_YM2612_RIGHT		50079
+#define IDC_YM2612_FBACK		50080
+#define IDC_YM2612_ALGO			50081
+#define IDC_YM2612_LFO 			50082
+#define IDC_YM2612_TIMER_A1		50083
+#define IDC_YM2612_TIMER_A2		50084
+#define IDC_YM2612_TIMER_A3		50085
+#define IDC_YM2612_TIMER_B1		50086
+#define IDC_YM2612_TIMER_B2		50087
+#define IDC_YM2612_TIMER_B3		50088
+#define IDC_YM2612_DAC				50089
+#define IDC_YM2612_KEY_1_1		50090
+#define IDC_YM2612_KEY_1_2		50091
+#define IDC_YM2612_KEY_1_3		50092
+#define IDC_YM2612_KEY_1_4		50093
+#define IDC_YM2612_KEY_2_1		50094
+#define IDC_YM2612_KEY_2_2		50095
+#define IDC_YM2612_KEY_2_3		50096
+#define IDC_YM2612_KEY_2_4		50097
+#define IDC_YM2612_KEY_3_1		50098
+#define IDC_YM2612_KEY_3_2		50099
+#define IDC_YM2612_KEY_3_3		50100
+#define IDC_YM2612_KEY_3_4		50101
+#define IDC_YM2612_KEY_4_1		50102
+#define IDC_YM2612_KEY_4_2		50103
+#define IDC_YM2612_KEY_4_3		50104
+#define IDC_YM2612_KEY_4_4		50105
+#define IDC_YM2612_KEY_5_1		50106
+#define IDC_YM2612_KEY_5_2		50107
+#define IDC_YM2612_KEY_5_3		50108
+#define IDC_YM2612_KEY_5_4		50109
+#define IDC_YM2612_KEY_6_1		50110
+#define IDC_YM2612_KEY_6_2		50111
+#define IDC_YM2612_KEY_6_3		50112
+#define IDC_YM2612_KEY_6_4		50113
+#define IDC_YM2612_DUMP   		50114
+#define IDC_YM2612_TIMER      50115
+#define IDC_YM2612_C3MODE     50116
+
+
