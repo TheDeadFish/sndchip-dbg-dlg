@@ -10,7 +10,7 @@
 
 
 
-IDD_DEBUGYM2612 DIALOG DISCARDABLE  0, 0, 346, 321
+CHIPDBG_YM2612 DIALOG DISCARDABLE  0, 0, 346, 321
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_VISIBLE
 CAPTION "Yamaha 2612"
 FONT 8, "MS Sans Serif"
@@ -120,11 +120,11 @@ BEGIN
 END
 
 
-IDB_ALGO0               BITMAP  DISCARDABLE     "algo0.bmp"
-IDB_ALGO1               BITMAP  DISCARDABLE     "algo1.bmp"
-IDB_ALGO2               BITMAP  DISCARDABLE     "algo2.bmp"
-IDB_ALGO3               BITMAP  DISCARDABLE     "algo3.bmp"
-IDB_ALGO4               BITMAP  DISCARDABLE     "algo4.bmp"
-IDB_ALGO5               BITMAP  DISCARDABLE     "algo5.bmp"
-IDB_ALGO6               BITMAP  DISCARDABLE     "algo6.bmp"
-IDB_ALGO7               BITMAP  DISCARDABLE     "algo7.bmp"
+CHIPDBG_0               BITMAP  DISCARDABLE     "algo0.bmp"
+CHIPDBG_1               BITMAP  DISCARDABLE     "algo1.bmp"
+CHIPDBG_2               BITMAP  DISCARDABLE     "algo2.bmp"
+CHIPDBG_3               BITMAP  DISCARDABLE     "algo3.bmp"
+CHIPDBG_4               BITMAP  DISCARDABLE     "algo4.bmp"
+CHIPDBG_5               BITMAP  DISCARDABLE     "algo5.bmp"
+CHIPDBG_6               BITMAP  DISCARDABLE     "algo6.bmp"
+CHIPDBG_7               BITMAP  DISCARDABLE     "algo7.bmp"

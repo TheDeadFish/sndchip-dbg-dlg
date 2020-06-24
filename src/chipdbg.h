@@ -1,23 +1,28 @@
 #pragma once
+#define CHIPDBG_CALL extern "C" __stdcall
 
 struct ChipDebug;
 
+// define basic types
+#ifndef _WINDOWS_
+ typedef void* HWND;
+#endif
+
+
+CHIPDBG_CALL ChipDebug* CHIPDBG_C64SID(HWND);
+CHIPDBG_CALL ChipDebug* CHIPDBG_YM2612(HWND);
+
 // creation api
-extern "C" __declspec(dllexport)
-ChipDebug* chipdbg_create_(void* hParent, long long id);
-extern "C" __declspec(dllexport)
-void chipdbg_create(ChipDebug**, void* hParent, long long id);
-extern "C" __declspec(dllexport)
-void chipdbg_toggle(ChipDebug**, void* hParent, long long id);
-extern "C" __declspec(dllexport)
+CHIPDBG_CALL
+void chipdbg_create(ChipDebug**, HWND, decltype(CHIPDBG_C64SID));
+CHIPDBG_CALL
+void chipdbg_toggle(ChipDebug**, HWND, decltype(CHIPDBG_C64SID));
+CHIPDBG_CALL
 void chipdbg_destroy(ChipDebug**);
 
-extern "C" __declspec(dllexport) __thiscall
+CHIPDBG_CALL
 int chipdbg_alive(ChipDebug*); 
-extern "C" __declspec(dllexport) __thiscall
+CHIPDBG_CALL
 void chipdbg_write(ChipDebug*, int addr, int data);
-extern "C" __declspec(dllexport) __thiscall
+CHIPDBG_CALL
 void chipdbg_select(ChipDebug*, int chnl);
-
-#define CHIPDBG_C64SID 0x444953343643LL
-#define CHIPDBG_YM2612 0x323136324d59LL

@@ -51,9 +51,10 @@ void YM2612Debug::initDialog(HWND hwnd)
 {
 	this->hwnd = hwnd;
 	
-	for(int i = 0; i < 8; i++) {
-		algoBm[i] = LoadBitmap( ghInstance, 
-			MAKEINTRESOURCE( IDB_ALGO0 + i) ); }
+	for(int i = 0; i < 8; i++) { WCHAR buff[32];
+		algoBm[i] = LoadBitmap( getModuleBase(), 
+			chipdbg_resName(buff, YM2612_ALGO+i));
+	}
 	
 	// init tab control
 	for(int i = 0; i < 6; i++) {
@@ -188,5 +189,4 @@ INT_PTR YM2612Debug::DlgProc( HWND hwnd,
 }
 
 
-CHIPDBG_DEFCREATE(ym2612_create, 
-	YM2612Debug, IDD_DEBUGYM2612)
+CHIPDBG_DEFCREATE(YM2612Debug, YM2612)

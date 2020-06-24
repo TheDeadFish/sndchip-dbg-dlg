@@ -2,17 +2,6 @@
 #define IDC_STATIC (-1)
 #endif
 
-#define IDB_ALGO0                       401
-#define IDB_ALGO1                       402
-#define IDB_ALGO2                       403
-#define IDB_ALGO3                       404
-#define IDB_ALGO4                       405
-#define IDB_ALGO5                       406
-#define IDB_ALGO6                       407
-#define IDB_ALGO7                       408
-
-#define IDD_DEBUGYM2612			101
-
 #define IDC_YM2612_TAB			50071
 #define IDC_YM2612_OP1			50072
 #define IDC_YM2612_OP2			50073

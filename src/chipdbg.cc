@@ -2,8 +2,6 @@
 #include <win32hlp.h>
 #include "chipdbgInt.h"
 
-const char progName[] = "chipdbg";
-
 HINSTANCE ghInstance;
 
 void chnSelCombo_init(HWND hwnd, int nChnl)
@@ -34,24 +32,13 @@ void setDlgChkBits(HWND hwnd, const WORD* lst, byte data)
 		CheckDlgButton(hwnd, *lst, !!(data & 1)); }
 }
 
-ChipDebug* chipdbg_create_(void* hParent, long long id)
-{
-	ghInstance = getModuleBase();
-
-	switch(id) {
-	case CHIPDBG_C64SID: return c64sid_create((HWND)hParent);
-	case CHIPDBG_YM2612: return ym2612_create((HWND)hParent);
-	default: return NULL;
-	}
-}
-
-void chipdbg_create(ChipDebug** ctx, void* hParent, long long id)
+void chipdbg_create(ChipDebug** ctx, HWND hParent, decltype(CHIPDBG_C64SID) id)
 {
 	if(!chipdbg_alive(*ctx)) {	chipdbg_destroy(ctx);
-		*ctx = chipdbg_create_(hParent, id); }
+		*ctx = id(hParent); }
 }
 
-void chipdbg_toggle(ChipDebug** ctx, void* hParent, long long id)
+void chipdbg_toggle(ChipDebug** ctx, HWND hParent, decltype(CHIPDBG_C64SID) id)
 {
 	if(chipdbg_alive(*ctx)) { chipdbg_destroy(ctx); }
 	else { chipdbg_create(ctx, hParent, id); }
@@ -79,6 +66,15 @@ void chipdbg_select(ChipDebug* This, int chnl)
 	if(This) This->select(chnl);
 }
 
+
+WCHAR* chipdbg_resName(WCHAR* str, int index)
+{
+	wsprintfW(str, L"CHIPDBG_%d", index);
+	return str;
+}
+
+#if 0
 extern "C" __declspec( dllexport )
 int __stdcall DllMainCRTStartup(
 	void* h, int r, void* s) { return 1; }
+#endif

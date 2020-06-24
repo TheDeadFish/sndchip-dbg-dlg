@@ -2,7 +2,6 @@
 #define IDC_STATIC (-1)
 #endif
 
-#define IDD_C64SID                             100
 #define IDC_CHNSEL                              1000
 #define IDC_FREQ                                1006
 #define IDC_AD                                  1010

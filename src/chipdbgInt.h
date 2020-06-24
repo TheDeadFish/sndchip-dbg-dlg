@@ -17,12 +17,14 @@ struct ChipDebug
 	HWND hwnd;
 	void destroy() { DestroyWindow(hwnd); hwnd =0; }
 };
-	
- 
-ChipDebug* c64sid_create(HWND);
-ChipDebug* ym2612_create(HWND);
 
-#define CHIPDBG_DEFCREATE(name, type, idd) \
-ChipDebug* name(HWND hParent) { type* dbg = new type(); \
-	CreateDialogParam(ghInstance, MAKEINTRESOURCE(idd), \
+#define CHIPDBG_DEFCREATE(type, idd) CHIPDBG_CALL \
+ChipDebug* CHIPDBG_##idd(HWND hParent) { type* dbg = new type(); \
+	extern const WCHAR resn_CHIPDBG_##idd[]; \
+	CreateDialogParam(ghInstance, resn_CHIPDBG_##idd, \
 	hParent, dbg->cDlgProc, (LPARAM)dbg); return dbg; }
+
+WCHAR* chipdbg_resName(WCHAR* str, int index);
+
+// resource allocations
+#define YM2612_ALGO 0
